@@ -7,7 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
+@Getter
+@Setter
 @Table(name="user")
 public class User{
 		@Id
@@ -18,19 +23,10 @@ public class User{
 		@Column
 		private String name;
 
-		public int getId(){
-				return this.id;
-		}
+		@Column
+		private String address;
 
-		public void setId(int id){
-				this.id = id;
-		}
+		@Column
+		private String tel;
 
-		public String getName(){
-				return this.name;
-		}
-
-		public void setName(String name){
-				this.name = name;
-		}
 }
